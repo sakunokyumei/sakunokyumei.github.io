@@ -4,23 +4,48 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>朔之玖溟｜公式サイト</title>
-	<meta name="description" content="朔之玖溟の公式サイト" />
+	<meta name="description" content="朔之玖溟（さくのきゅうめい／Sakuno Kyumei）の公式サイト" />
 
-	<!-- favicon 公開用（ローカル用を削除してから）-->
-	<!-- <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-	<link rel="shortcut icon" href="/favicon.ico" />
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-	<meta name="apple-mobile-web-app-title" content="朔之玖溟｜公式サイト" />
-	<link rel="manifest" href="/site.webmanifest" /> -->
+	<!-- OGP -->
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="朔之玖溟（さくのきゅうめい / Sakuno Kyumei）｜公式サイト" />
+	<meta property="og:description" content="朔之玖溟（さくのきゅうめい／Sakuno Kyumei）の公式サイト" />
+	<meta property="og:url" content="https://sakunokyumei.github.io/" />
+	<meta property="og:site_name" content="朔之玖溟｜公式サイト" />
+	<meta property="og:image" content="https://sakunokyumei.github.io/images/ogp.jpg" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
 
-	<!-- favicon ローカル用 -->
-	<link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
-	<link rel="icon" type="image/svg+xml" href="favicon.svg" />
-	<link rel="shortcut icon" href="favicon.ico" />
-	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+	<!-- Twitterカード -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="朔之玖溟（さくのきゅうめい / Sakuno Kyumei）｜公式サイト" />
+	<meta name="twitter:description" content="朔之玖溟（さくのきゅうめい／Sakuno Kyumei）の公式サイト" />
+	<meta name="twitter:image" content="https://sakunokyumei.github.io/images/ogp.jpg" />
+
+	<!-- favicon -->
+	<link rel="icon" type="image/png" href="./favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+	<link rel="shortcut icon" href="./favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
 	<meta name="apple-mobile-web-app-title" content="朔之玖溟｜公式サイト" />
-	<link rel="manifest" href="site.webmanifest" />
+	<link rel="manifest" href="./site.webmanifest" />
+
+	<!-- 構造化データ（検索エンジン向け：表記ゆれを紐付け） -->
+	<script type="application/ld+json">
+	{
+	  "@context": "https://schema.org",
+	  "@type": "Person",
+	  "name": "朔之玖溟",
+	  "alternateName": ["さくのきゅうめい", "Sakuno Kyumei"],
+	  "url": "https://sakunokyumei.github.io/",
+	  "sameAs": [
+		"https://twitter.com/sakunokyumei",
+		"https://note.com/sakunokyumei",
+		"https://kakuyomu.jp/users/cnw",
+		"https://github.com/sakunokyumei"
+	  ]
+	}
+	</script>
 
 	<!-- リセットCSS -->
 	<link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
@@ -29,82 +54,96 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link
-	  href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Noto+Serif+JP:wght@200..900&family=Shippori+Mincho:wght@400..800&display=swap"
+	  href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500;600&family=Noto+Serif+JP:wght@400;700&family=Shippori+Mincho:wght@400;700;800&display=swap"
 	  rel="stylesheet"
-	/>　
+	/>
 
 	<!-- オリジナルCSS -->
 	<link rel="stylesheet" href="css/style.css" />
+
+	<!-- JavaScript -->
+	<script src="js/script.js" defer></script>
   </head>
 
   <body>
+	<a class="skip-link" href="#main-content">本文へスキップ</a>
+
+	<div class="ink-loader" aria-hidden="true"><span></span></div>
+
 	<header class="page-header-color">
 	  <div class="wrapper page-header">
 		<a class="logo font-english" href="index.html">朔之玖溟</a>
 		<nav>
-		  <button class="btn-menu" aria-expanded="false" aria-controls="main-nav">Menu</button>
+		  <button class="btn-menu" aria-expanded="false" aria-controls="main-nav">
+			<span class="btn-menu-line"></span>
+		  </button>
 		  <ul class="main-nav" id="main-nav">
-			<li><a href="#self-introduction">01 — Profile</a></li>
-			<li><a href="#writing">02 — Writing</a></li>
-			<li><a href="#reading">03 — Reading</a></li>
-			<li><a href="#portfolio">04 — Portfolio</a></li>
+			<li><span class="nav-index font-english">01</span><a href="#self-introduction">Profile</a></li>
+			<li><span class="nav-index font-english">02</span><a href="#writing">Writing</a></li>
+			<li><span class="nav-index font-english">03</span><a href="#reading">Reading</a></li>
+			<li><span class="nav-index font-english">04</span><a href="#portfolio">Portfolio</a></li>
+			<li><span class="nav-index font-english">05</span><a href="#sns">SNS</a></li>
 		  </ul>
 		</nav>
 	  </div>
 	</header>
+	<div class="nav-backdrop" aria-hidden="true"></div>
 
 	<section id="main-title" class="cover">
 	  <div class="main-title-inner">
-		<p class="eyebrow font-english">Official Website</p>
-		<h1><span>朔之玖溟</span></h1>
-		<p class="sub-english font-english">Sakuno&nbsp;Kyumei</p>
+		<p class="eyebrow font-english" data-reveal>Official Website</p>
+		<h1>
+		  <span class="title-char">朔</span><span class="title-char">之</span><span class="title-char">玖</span><span class="title-char">溟</span>
+		</h1>
+		<p class="sub-english font-english" data-reveal>Sakuno&nbsp;Kyumei</p>
 	  </div>
 	  <span class="scroll-cue" aria-hidden="true">Scroll</span>
 	</section>
 
-	<main>
+	<main id="main-content">
 	  <section id="self-introduction" class="wrapper">
-		<p class="section-eyebrow font-english">01 — Profile</p>
-		<h2 class="heading-large">自己紹介</h2>
-		<article class="profile">
+		<p class="section-eyebrow font-english" data-reveal>01 — Profile</p>
+		<h2 class="heading-large" data-reveal>自己紹介</h2>
+		<article class="profile" data-reveal>
 		  <div class="profile-wrapper">
-			<a href="#sns"><img src="images/profile.png" alt="プロフィール画像" class="profile-image" /></a>
+			<a href="#sns" aria-label="SNSセクションへ移動"><img src="images/profile.png" alt="朔之玖溟のプロフィール画像" class="profile-image" width="160" height="160" loading="lazy" /></a>
 		  </div>
 		  <div class="profile-contents">
 			<h3>朔之 玖溟</h3>
 			<p class="font-english sub-english small">Sakuno Kyumei</p>
-			<p class="profile-text">
-			  2008年大阪生まれ。
-			  <br>
-			  第31回岐阜県文芸祭で優秀賞受賞。
-			</p>
+			<div class="profile-text">
+			  <p>2008年大阪生まれ。</p>
+			  <p>第31回岐阜県文芸祭で優秀賞受賞。</p>
+			</div>
 		  </div>
 		</article>
 	  </section>
 
 	  <section id="writing" class="section-dark">
 		<div class="wrapper">
-		  <p class="section-eyebrow font-english">02 — Writing</p>
-		  <h2>Writing</h2>
+		  <p class="section-eyebrow font-english" data-reveal>02 — Writing</p>
+		  <h2 data-reveal>Writing</h2>
 
-		  <div class="writing-contents">
-			<h3>　おまえの度胸には驚嘆させられるねえ、と伯母は云った。眼窩はじっとおれを見つめ、死んだ魚のように思えてくるものの、伯母の興奮はかなりのものである。</h3>
-			<p>&mdash;&mdash; アウトサイダー</p>
-		  </div>
-		  <div class="writing-contents">
-			<h3>　狂気か、はたまた悪夢であろうか、<br>　安田道夫は、二人の人間&mdash;&mdash;男と女&mdash;&mdash;を亡骸に変えたことがある。</h3>
-			<p>&mdash;&mdash; 心理遺伝</p>
-		  </div>
-		  <div class="writing-contents">
-			<h3>　日常で積もった困憊は酒で落とす。男がオン・ザ・ロックを注文すると彼女もならった。夜の帳が面白そうにしている。</h3>
-			<p>&mdash;&mdash; 人間という騙し絵</p>
+		  <div class="writing-excerpts">
+			<div class="writing-contents" data-reveal>
+			  <h3>おまえの度胸には驚嘆させられるねえ、と伯母は云った。眼窩はじっとおれを見つめ、死んだ魚のように思えてくるものの、伯母の興奮はかなりのものである。</h3>
+			  <p>&mdash;&mdash; アウトサイダー</p>
+			</div>
+			<div class="writing-contents" data-reveal>
+			  <h3>狂気か、はたまた悪夢であろうか、<br>安田道夫は、二人の人間&mdash;&mdash;男と女&mdash;&mdash;を亡骸に変えたことがある。</h3>
+			  <p>&mdash;&mdash; 心理遺伝</p>
+			</div>
+			<div class="writing-contents" data-reveal>
+			  <h3>日常で積もった困憊は酒で落とす。男がオン・ザ・ロックを注文すると彼女もならった。夜の帳が面白そうにしている。</h3>
+			  <p>&mdash;&mdash; 人間という騙し絵</p>
+			</div>
 		  </div>
 
-		  <div class="writing-text-box">
+		  <div class="writing-text-box" data-reveal>
 			<div class="writing-text">
 			  <h3>「書く」ということ</h3>
 			  <p>
-				<br>　僕は、完璧な文章が書けない。何を完璧とするかによって、答えは人それぞれだと思うが、どうにも文章には限界があるような、そんな感覚がある。「伝えたいことを正確に伝える能力」が筆力とするならば、やはり完璧な文章など書けないのではないか、と日々思っている。
+				僕は、完璧な文章が書けない。何を完璧とするかによって、答えは人それぞれだと思うが、どうにも文章には限界があるような、そんな感覚がある。「伝えたいことを正確に伝える能力」が筆力とするならば、やはり完璧な文章など書けないのではないか、と日々思っている。
 				<br><br>　&mdash;&mdash; そもそも、創作を始めたきっかけは何だったか。
 				<br><br>　小説を読んで、「ああ、自分でもこういうのを書けたらな」と憧れたからである。他にも理由はあるが、小説という表現方法を知っていたからこそ、自分でも執筆する気になったのだ。文章は、会話よりも時間がかかる。伝えるのも、理解するのも、圧倒的に会話のほうがスピードは速い。
 				<br><br>　しかし、文章を書く行為自体には、何らかの意味があるはずだ。
@@ -113,7 +152,7 @@
 				<br><br>　文章に隠されたニュアンスや、作者の考えが、完璧に読者に伝わることはほとんどないように思える。
 				<br><br>　だからこそ、「完璧な文章が書けない」と思う。人が、人を完璧に理解できないのと同じように、そこには個人の考え方があるからだ。
 			  </p>
-			  <h4>　文章の根底には、個人がいる。</h4>
+			  <h4>文章の根底には、個人がいる。</h4>
 			</div>
 			<p class="writing-source small">&mdash;&mdash; なぜ筆力があっても、小説は売れないのか</p>
 		  </div>
@@ -121,57 +160,107 @@
 	  </section>
 
 	  <section id="reading" class="wrapper">
-		<p class="section-eyebrow font-english">03 — Reading</p>
-		<h2>Reading</h2>
-		<p class="lead-text">ホラー小説、</p>
+		<p class="section-eyebrow font-english" data-reveal>03 — Reading</p>
+		<h2 data-reveal>Reading</h2>
+		<article class="reading-contents" data-reveal>
+		  <p class="reading-text">
+			　最も敬愛する小説家は <strong>"H・P・ラヴクラフト"</strong> 。その作品群すべてに魅了されている。
+			<br><br>
+			　ほかにも、江戸川乱歩、中原中也、太宰治、エドガー・アラン・ポー、安里アサト、綾辻行人、貴志祐介、今村昌弘、星新一、ダレン・シャン、鈴木光司、芥川龍之介、村上春樹、東野圭吾、スティーヴン・キング、ブライアン・ラムレイ、重松清、伊坂幸太郎、相田みつをなど、挙げればきりがないほど多くの作家から影響を受けてきた。
+			<br><br>
+			　作品単体では、『アルジャーノンに花束を』を幾度となく読み返している。『ビブリア古書堂の事件手帖』シリーズも印象深く、ライトノベルでは『86―エイティシックス―』シリーズを特に高く評価しており、創作にも大きな影響を受けている。
+		  </p>
+		</article>
 	  </section>
 
 	  <section id="portfolio" class="section-indigo">
 		<div class="wrapper">
-		  <p class="section-eyebrow font-english">04 — Portfolio</p>
-		  <h2>Portfolio</h2>
-		  <p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio nemo quod tempore facere vitae incidunt mollitia totam, aspernatur quasi nisi. Cupiditate eaque laboriosam culpa animi fugit iusto eos consequatur repellendus ad, a cumque rerum adipisci labore aspernatur harum quae eveniet dolorem laudantium incidunt eius. Laborum iusto nihil quisquam dolore id debitis molestiae voluptatem dolores officia eos. Nesciunt quis at fugit quisquam totam. Optio beatae laborum officia eum totam, quidem facere architecto recusandae repudiandae nobis aliquid natus rerum, fugit praesentium tempora, rem quasi ducimus corrupti! Nostrum repellendus totam tenetur consequuntur, nemo nam voluptatem error voluptas consequatur eos deserunt aliquid, commodi voluptates quidem reprehenderit iste autem quo perspiciatis quod? Iste corrupti sint voluptates neque laborum suscipit, id, provident magni magnam hic corporis pariatur nulla nisi laudantium minus ex perspiciatis est, recusandae
-			consectetur? Dolorem expedita optio sed nulla quis atque voluptatem necessitatibus facilis! Aperiam, aliquid! Amet consequuntur facilis iure animi saepe tempora fuga?
-		  </p>
+		  <p class="section-eyebrow font-english" data-reveal>04 — Portfolio</p>
+		  <h2 data-reveal>Portfolio</h2>
+
+		  <div class="portfolio-grid">
+			<article class="portfolio-item" data-reveal>
+			  <span class="portfolio-num font-english">01</span>
+			  <h3 class="heading-medium">小説・文芸活動</h3>
+			  <ul class="portfolio-list">
+				<li>第31回岐阜県文芸祭にて優秀賞受賞</li>
+				<li>カクヨムを中心に小説を執筆・掲載</li>
+				<li>noteにてエッセイを発信</li>
+			  </ul>
+			</article>
+
+			<article class="portfolio-item" data-reveal>
+			  <span class="portfolio-num font-english">02</span>
+			  <h3 class="heading-medium">Web制作</h3>
+			  <ul class="portfolio-list">
+				<li>本サイト（個人公式サイト）を設計・実装</li>
+				<li>
+				  <a href="https://neo-polar.github.io/index.html" target="_blank" rel="noopener">Polar</a>
+				  （複数ジャンル横断型クリエイティブ組織）を友人と共同運営。共同創設者 / プロジェクトマネージャー / Web制作 を担当する
+				</li>
+			  </ul>
+			</article>
+		  </div>
 		</div>
 	  </section>
 
 	  <section id="sns" class="wrapper">
-		<p class="section-eyebrow font-english">05 — SNS</p>
-		<h2>SNS</h2>
+		<p class="section-eyebrow font-english" data-reveal>05 — SNS</p>
+		<h2 data-reveal>SNS</h2>
 		<div class="sns-grid">
-		  <div class="sns-item">
-			<h3 class="heading-medium">X</h3>
-			<blockquote class="twitter-tweet" data-lang="ja" data-theme="light">
-			  <p lang="ja" dir="ltr">
-				自己紹介｜朔之玖溟 <a href="https://twitter.com/sakunokyumei?ref_src=twsrc%5Etfw">@sakunokyumei</a> <a href="https://twitter.com/hashtag/%E3%81%AF%E3%81%98%E3%82%81%E3%81%A6%E3%81%AEnote?src=hash&amp;ref_src=twsrc%5Etfw">#はじめてのnote</a>
-				<a href="https://t.co/loXmIhywcN">https://t.co/loXmIhywcN</a>
-			  </p>
-			  &mdash; 朔之玖溟 (@sakunokyumei) <a href="https://twitter.com/sakunokyumei/status/2046552755456876698?ref_src=twsrc%5Etfw">2026年4月21日</a>
-			</blockquote>
-			<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-		  </div>
-		  <div class="sns-item">
-			<h3 class="heading-medium">note</h3>
-			<iframe class="note-embed" src="https://note.com/embed/notes/n2b9c4a7a17a2" style="border: 0; display: block; max-width: 99%; width: 494px; padding: 0px; margin: 10px 0px; position: static; visibility: visible" height="400"></iframe>
-			<script async src="https://note.com/scripts/embed.js" charset="utf-8"></script>
-		  </div>
-		  <div class="sns-item">
-			<h3 class="heading-medium">カクヨム</h3>
-			<a href="https://kakuyomu.jp/users/cnw"><img class="kakuyomu" src="images/kakuyomu.jpg" alt="カクヨム" /></a>
-		  </div>
+		  <a class="sns-card" href="https://twitter.com/sakunokyumei" target="_blank" rel="noopener" data-reveal>
+			<span class="sns-card-icon sns-card-icon-x">
+			  <img src="images/sns_x_logo.png" alt="" aria-hidden="true" loading="lazy" />
+			</span>
+			<span class="sns-card-body">
+			  <span class="sns-card-label font-english">X (Twitter)</span>
+			  <span class="sns-card-handle">@sakunokyumei</span>
+			</span>
+			<span class="sns-card-arrow" aria-hidden="true">&rarr;</span>
+		  </a>
+
+		  <a class="sns-card" href="https://note.com/sakunokyumei" target="_blank" rel="noopener" data-reveal>
+			<span class="sns-card-icon sns-card-icon-note">
+			  <img src="images/sns_note_app.png" alt="" aria-hidden="true" loading="lazy" />
+			</span>
+			<span class="sns-card-body">
+			  <span class="sns-card-label font-english">note</span>
+			  <span class="sns-card-handle">創作論・エッセイ</span>
+			</span>
+			<span class="sns-card-arrow" aria-hidden="true">&rarr;</span>
+		  </a>
+
+		  <a class="sns-card sns-card-image" href="https://kakuyomu.jp/users/cnw" target="_blank" rel="noopener" data-reveal>
+			<img src="images/kakuyomu.jpg" alt="" aria-hidden="true" loading="lazy" />
+			<span class="sns-card-body">
+			  <span class="sns-card-label font-english">Kakuyomu</span>
+			  <span class="sns-card-handle">小説投稿・掲載</span>
+			</span>
+			<span class="sns-card-arrow" aria-hidden="true">&rarr;</span>
+		  </a>
+
+		  <a class="sns-card" href="https://github.com/sakunokyumei" target="_blank" rel="noopener" data-reveal>
+			<span class="sns-card-icon sns-card-icon-github">
+			  <img src="images/sns_GitHub_logo.png" alt="" aria-hidden="true" loading="lazy" />
+			</span>
+			<span class="sns-card-body">
+			  <span class="sns-card-label font-english">GitHub</span>
+			  <span class="sns-card-handle">開発・リポジトリ</span>
+			</span>
+			<span class="sns-card-arrow" aria-hidden="true">&rarr;</span>
+		  </a>
 		</div>
 	  </section>
 	</main>
 
 	<footer>
-	  <div class="copyright">
-		<small>&copy;Sakuno Kyumei</small>
+	  <div class="wrapper footer-inner">
+		<a class="footer-logo font-english" href="index.html">朔之玖溟</a>
+		<div class="copyright">
+		  <small>Copyright &copy; 2026 Sakuno Kyumei. All rights reserved.</small>
+		</div>
 	  </div>
 	</footer>
 
-	<!-- JavaScript -->
-	<script src="js/script.js"></script>
   </body>
 </html>
