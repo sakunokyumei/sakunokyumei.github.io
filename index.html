@@ -47,6 +47,15 @@
 	}
 	</script>
 
+	<script type="application/ld+json">
+	{
+	  "@context": "https://schema.org",
+	  "@type": "WebSite",
+	  "name": "SakunoKyumei",
+	  "url": "https://sakunokyumei.github.io/"
+	}
+	</script>
+
 	<!-- リセットCSS -->
 	<link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
 
@@ -60,6 +69,7 @@
 
 	<!-- オリジナルCSS -->
 	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/refinement.css" />
 
 	<!-- JavaScript -->
 	<script src="js/script.js" defer></script>
@@ -90,11 +100,21 @@
 
 	<section id="main-title" class="cover">
 	  <div class="main-title-inner">
-		<p class="eyebrow font-english" data-reveal>Official Website</p>
-		<h1>
-		  <span class="title-char">朔</span><span class="title-char">之</span><span class="title-char">玖</span><span class="title-char">溟</span>
-		</h1>
-		<p class="sub-english font-english" data-reveal>Sakuno&nbsp;Kyumei</p>
+		<div class="hero-copy">
+		  <p class="eyebrow font-english" data-reveal>Official Website · Sakuno Kyumei</p>
+		  <p class="hero-kicker" data-reveal>小説・文芸 ／ Web制作</p>
+		  <p class="hero-statement" data-reveal>ことばから、<br>まだ見ぬ景色へ。</p>
+		  <p class="hero-description" data-reveal>物語を書き、文章を綴り、Webをつくる。<br>朔之玖溟の活動と作品を紹介します。</p>
+		  <div class="hero-actions" data-reveal>
+			<a class="hero-primary-link" href="portfolio.html">作品・活動を見る <span aria-hidden="true">↗</span></a>
+			<a class="hero-secondary-link" href="#self-introduction">プロフィールへ <span aria-hidden="true">↓</span></a>
+		  </div>
+		</div>
+		<div class="hero-signature">
+		  <span class="hero-signature-label font-english" aria-hidden="true">SAKUNO KYUMEI</span>
+		  <h1><span class="title-char">朔</span><span class="title-char">之</span><span class="title-char">玖</span><span class="title-char">溟</span></h1>
+		  <p class="sub-english font-english" data-reveal>Sakuno&nbsp;Kyumei</p>
+		</div>
 	  </div>
 	  <span class="scroll-cue" aria-hidden="true">Scroll</span>
 	</section>
@@ -113,6 +133,7 @@
 			<div class="profile-text">
 			  <p>2008年大阪生まれ。</p>
 			  <p>第31回岐阜県文芸祭で優秀賞受賞。</p>
+			  <p>小説・文芸活動とWeb制作に取り組んでいます。</p>
 			</div>
 		  </div>
 		</article>
@@ -125,20 +146,22 @@
 
 		  <div class="writing-excerpts">
 			<div class="writing-contents" data-reveal>
-			  <h3>おまえの度胸には驚嘆させられるねえ、と伯母は云った。眼窩はじっとおれを見つめ、死んだ魚のように思えてくるものの、伯母の興奮はかなりのものである。</h3>
-			  <p>&mdash;&mdash; アウトサイダー</p>
+			  <blockquote>おまえの度胸には驚嘆させられるねえ、と伯母は云った。眼窩はじっとおれを見つめ、死んだ魚のように思えてくるものの、伯母の興奮はかなりのものである。</blockquote>
+			  <cite>&mdash;&mdash; アウトサイダー</cite>
 			</div>
 			<div class="writing-contents" data-reveal>
-			  <h3>狂気か、はたまた悪夢であろうか、<br>安田道夫は、二人の人間&mdash;&mdash;男と女&mdash;&mdash;を亡骸に変えたことがある。</h3>
-			  <p>&mdash;&mdash; 心理遺伝</p>
+			  <blockquote>狂気か、はたまた悪夢であろうか、<br>安田道夫は、二人の人間&mdash;&mdash;男と女&mdash;&mdash;を亡骸に変えたことがある。</blockquote>
+			  <cite>&mdash;&mdash; 心理遺伝</cite>
 			</div>
 			<div class="writing-contents" data-reveal>
-			  <h3>日常で積もった困憊は酒で落とす。男がオン・ザ・ロックを注文すると彼女もならった。夜の帳が面白そうにしている。</h3>
-			  <p>&mdash;&mdash; 人間という騙し絵</p>
+			  <blockquote>日常で積もった困憊は酒で落とす。男がオン・ザ・ロックを注文すると彼女もならった。夜の帳が面白そうにしている。</blockquote>
+			  <cite>&mdash;&mdash; 人間という騙し絵</cite>
 			</div>
 		  </div>
 
-		  <div class="writing-text-box" data-reveal>
+		  <details class="writing-essay" data-reveal>
+			<summary><span class="writing-essay-label font-english">ESSAY / 創作論</span><strong>「書く」ということ</strong><span class="writing-essay-action">本文を読む <span aria-hidden="true">＋</span></span></summary>
+		  <div class="writing-text-box">
 			<div class="writing-text">
 			  <h3>「書く」ということ</h3>
 			  <p>
@@ -155,6 +178,7 @@
 			</div>
 			<p class="writing-source small">&mdash;&mdash; なぜ筆力があっても、小説は売れないのか</p>
 		  </div>
+		  </details>
 		</div>
 	  </section>
 
@@ -162,13 +186,9 @@
 		<p class="section-eyebrow font-english" data-reveal>03 — Reading</p>
 		<h2 data-reveal>Reading</h2>
 		<article class="reading-contents" data-reveal>
-		  <p class="reading-text">
-			　最も敬愛する小説家は <strong>"H・P・ラヴクラフト"</strong> 。その作品群すべてに魅了されている。
-			<br><br>
-			　ほかにも、江戸川乱歩、中原中也、太宰治、エドガー・アラン・ポー、安里アサト、綾辻行人、貴志祐介、今村昌弘、星新一、ダレン・シャン、鈴木光司、芥川龍之介、村上春樹、東野圭吾、スティーヴン・キング、ブライアン・ラムレイ、重松清、伊坂幸太郎、相田みつをなど、挙げればきりがないほど多くの作家から影響を受けてきた。
-			<br><br>
-			　作品単体では、『アルジャーノンに花束を』を幾度となく読み返している。『ビブリア古書堂の事件手帖』シリーズも印象深く、ライトノベルでは『86―エイティシックス―』シリーズを特に高く評価しており、創作にも大きな影響を受けている。
-		  </p>
+		  <p class="reading-text">最も敬愛する小説家は <strong>H・P・ラヴクラフト</strong>。その作品群すべてに魅了されている。</p>
+		  <p class="reading-text">ほかにも、江戸川乱歩、中原中也、太宰治、エドガー・アラン・ポー、安里アサト、綾辻行人、貴志祐介、今村昌弘、星新一、ダレン・シャン、鈴木光司、芥川龍之介、村上春樹、東野圭吾、スティーヴン・キング、ブライアン・ラムレイ、重松清、伊坂幸太郎、相田みつをなど、挙げればきりがないほど多くの作家から影響を受けてきた。</p>
+		  <p class="reading-text">作品単体では、『アルジャーノンに花束を』を幾度となく読み返している。『ビブリア古書堂の事件手帖』シリーズも印象深く、ライトノベルでは『86―エイティシックス―』シリーズを特に高く評価しており、創作にも大きな影響を受けている。</p>
 		</article>
 	  </section>
 

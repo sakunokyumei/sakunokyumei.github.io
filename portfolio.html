@@ -18,6 +18,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500;600&family=Noto+Serif+JP:wght@400;700&family=Shippori+Mincho:wght@400;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/refinement.css" />
   <script src="js/script.js" defer></script>
 </head>
 <body class="portfolio-page">
@@ -45,10 +46,11 @@
         <h1 data-reveal>Portfolio</h1>
         <p class="portfolio-hero-jp" data-reveal>言葉を紡ぎ、かたちにする。</p>
         <p class="portfolio-hero-copy" data-reveal>小説・文芸活動、Web制作。気になる作品や活動へ、こちらからアクセスできます。</p>
+        <a class="portfolio-hero-link" href="#works" data-reveal>リンク一覧へ <span aria-hidden="true">↓</span></a>
         <span class="portfolio-hero-index font-english" aria-hidden="true">04 / ARCHIVE</span>
       </div>
     </section>
-    <section class="portfolio-listing wrapper">
+    <section id="works" class="portfolio-listing wrapper">
       <p class="section-eyebrow font-english" data-reveal>Works & Activities</p>
       <h2 data-reveal>活動一覧</h2>
       <p class="portfolio-directory-lead" data-reveal>リンクを選ぶと、作品・活動ページへ移動します。</p>
@@ -68,10 +70,8 @@
         <a class="portfolio-link-card" href="index.html" data-reveal>
           <span class="portfolio-link-number font-english">05</span><span class="portfolio-link-copy"><span class="portfolio-link-category">PROFILE / 公式サイト</span><strong>このサイト</strong><span>プロフィール・活動紹介</span></span><span class="portfolio-link-arrow" aria-hidden="true">↗</span>
         </a>
-        <div class="portfolio-award-card" data-reveal>
-          <span class="portfolio-link-number font-english">06</span><span class="portfolio-link-copy"><span class="portfolio-link-category">AWARD / 受賞</span><strong>第31回 岐阜県文芸祭</strong><span>優秀賞受賞</span></span><span class="portfolio-award-mark" aria-hidden="true">賞</span>
-        </div>
       </div>
+      <div class="portfolio-award-card" data-reveal><span class="portfolio-link-category">AWARD / 受賞歴</span><strong>第31回 岐阜県文芸祭　優秀賞</strong><span class="portfolio-award-mark" aria-hidden="true">賞</span></div>
       <div class="portfolio-contact" data-reveal>
         <p class="font-english">More about me</p>
         <span>活動や作品についてはSNSでも発信しています。</span>
