@@ -6,11 +6,13 @@ if (btn && menuList) {
     const closeMenu = () => {
         menuList.classList.remove('open-menu');
         btn.setAttribute('aria-expanded', 'false');
+        btn.setAttribute('aria-label', 'メニューを開く');
     };
 
     btn.addEventListener('click', () => {
         const isOpen = menuList.classList.toggle('open-menu');
         btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        btn.setAttribute('aria-label', isOpen ? 'メニューを閉じる' : 'メニューを開く');
     });
 
     // メニュー内のリンクをクリックしたら自動で閉じる（モバイル用）
@@ -20,7 +22,14 @@ if (btn && menuList) {
 
     // Escキーで閉じる
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') closeMenu();
+        if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') {
+            closeMenu();
+            btn.focus();
+        }
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!btn.contains(e.target) && !menuList.contains(e.target)) closeMenu();
     });
 }
 

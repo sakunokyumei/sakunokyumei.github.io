@@ -73,21 +73,20 @@
 	<header class="page-header-color">
 	  <div class="wrapper page-header">
 		<a class="logo font-english" href="index.html">朔之玖溟</a>
-		<nav>
-		  <button class="btn-menu" aria-expanded="false" aria-controls="main-nav">
+		<nav aria-label="メインナビゲーション">
+		  <button class="btn-menu" aria-expanded="false" aria-controls="main-nav" aria-label="メニューを開く">
 			<span class="btn-menu-line"></span>
 		  </button>
 		  <ul class="main-nav" id="main-nav">
 			<li><span class="nav-index font-english">01</span><a href="#self-introduction">Profile</a></li>
 			<li><span class="nav-index font-english">02</span><a href="#writing">Writing</a></li>
 			<li><span class="nav-index font-english">03</span><a href="#reading">Reading</a></li>
-			<li><span class="nav-index font-english">04</span><a href="#portfolio">Portfolio</a></li>
+			<li><span class="nav-index font-english">04</span><a href="portfolio.html">Portfolio</a></li>
 			<li><span class="nav-index font-english">05</span><a href="#sns">SNS</a></li>
 		  </ul>
 		</nav>
 	  </div>
 	</header>
-	<div class="nav-backdrop" aria-hidden="true"></div>
 
 	<section id="main-title" class="cover">
 	  <div class="main-title-inner">
@@ -173,34 +172,14 @@
 		</article>
 	  </section>
 
-	  <section id="portfolio" class="section-indigo">
+	  <section id="portfolio" class="section-indigo portfolio-teaser">
 		<div class="wrapper">
 		  <p class="section-eyebrow font-english" data-reveal>04 — Portfolio</p>
 		  <h2 data-reveal>Portfolio</h2>
+		  <p class="portfolio-intro" data-reveal>小説・文芸活動からWeb制作まで、これまでの仕事と作品をまとめています。</p>
 
-		  <div class="portfolio-grid">
-			<article class="portfolio-item" data-reveal>
-			  <span class="portfolio-num font-english">01</span>
-			  <h3 class="heading-medium">小説・文芸活動</h3>
-			  <ul class="portfolio-list">
-				<li>第31回岐阜県文芸祭にて優秀賞受賞</li>
-				<li>カクヨムを中心に小説を執筆・掲載</li>
-				<li>noteにてエッセイを発信</li>
-			  </ul>
-			</article>
-
-			<article class="portfolio-item" data-reveal>
-			  <span class="portfolio-num font-english">02</span>
-			  <h3 class="heading-medium">Web制作</h3>
-			  <ul class="portfolio-list">
-				<li>本サイト（個人公式サイト）を設計・実装</li>
-				<li>
-				  <a href="https://neo-polar.github.io/index.html" target="_blank" rel="noopener">Polar</a>
-				  （複数ジャンル横断型クリエイティブ組織）を友人と共同運営。共同創設者 / プロジェクトマネージャー / Web制作 を担当する
-				</li>
-			  </ul>
-			</article>
-		  </div>
+		  <p class="portfolio-teaser-line font-english" aria-hidden="true" data-reveal>Words / Web / Works</p>
+		  <a class="text-link portfolio-more" href="portfolio.html" data-reveal><span>ポートフォリオ一覧を見る</span><span aria-hidden="true">↗</span></a>
 		</div>
 	  </section>
 
