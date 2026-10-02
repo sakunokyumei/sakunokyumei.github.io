@@ -90,6 +90,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 .portfolio-link-copy strong { font-size: 1.5rem; }
 .portfolio-link-category { color: #87604f; font-size: .72rem; letter-spacing: .1em; }
 .portfolio-link-copy > span:last-child { font-size: .88rem; }
+.portfolio-link-copy > .portfolio-ai-label:last-child { align-self: flex-start; margin-top: .55rem; padding: .1rem .55rem; border: 1px solid #c7927f; color: #8d422d; background: #fff5f0; font-size: .72rem; line-height: 1.6; letter-spacing: .04em; }
 .portfolio-link-arrow { align-self: center; font-size: 1.3rem; }
 .portfolio-award-card { min-height: 90px; margin-top: 1rem; padding: 1rem 1.5rem; border: 1px solid var(--line); background: rgba(255,253,250,.5); }
 .portfolio-award-card strong { flex: 1; font-family: var(--font-heading); font-size: 1.05rem; }
