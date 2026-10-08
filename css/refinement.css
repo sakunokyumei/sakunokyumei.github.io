@@ -59,6 +59,11 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 .writing-essay[open] .writing-essay-action span { transform: rotate(45deg); }
 .writing-text-box { max-width: 760px; padding: 2rem 0 3rem; border: 0; }
 .writing-text p { line-height: 2.25; }
+/* The channel intro movie: the site's own MP4 until a YouTube ID is set. */
+.movie-lead { margin: 0 0 2rem; max-width: 640px; }
+.movie-frame { aspect-ratio: 16 / 9; overflow: hidden; background: var(--indigo-deep); box-shadow: 0 20px 50px rgba(18, 44, 57, .16); }
+.movie-frame video, .movie-frame iframe { display: block; width: 100%; height: 100%; border: 0; background: var(--indigo-deep); }
+.movie-caption { margin: 1rem 0 0; color: var(--ink-soft); }
 .reading-contents { max-width: 820px; margin: 2rem 0 0; padding: .25rem 0 .25rem 2rem; border: 0; border-left: 2px solid var(--vermilion); }
 .reading-text { line-height: 2.2; }
 .reading-text + .reading-text { margin-top: 1.5rem; }

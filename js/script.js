@@ -62,3 +62,18 @@ if (inkLoader) {
         inkLoader.remove();
     });
 }
+
+// 紹介動画：data-youtube-id に動画IDが入っていれば、サイト内のMP4の代わりにYouTubeを埋め込む
+const movieFrame = document.querySelector('.movie-frame[data-youtube-id]');
+const youtubeId = movieFrame ? movieFrame.dataset.youtubeId.trim() : '';
+
+if (movieFrame && /^[\w-]{11}$/.test(youtubeId)) {
+    const frame = document.createElement('iframe');
+    frame.src = `https://www.youtube-nocookie.com/embed/${youtubeId}?rel=0`;
+    frame.title = '朔之玖溟 チャンネル紹介動画';
+    frame.loading = 'lazy';
+    frame.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+    frame.referrerPolicy = 'strict-origin-when-cross-origin';
+    frame.allowFullscreen = true;
+    movieFrame.replaceChildren(frame);
+}
